@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "model": "/data/fcqiao/models/Qwen2.5-7B-Instruct",
+    "mode": "lmcache",
+    "cpu_cache_gb": 8,
+    "ssd_cache_gb": 20,
+    "scbench_subset": "scbench_qa_eng",
+    "bytes_per_token": 57344,
+    "timestamp": "20260610_173904"
+  },
+  "results": {
+    "ctx32k_ws8": {
+      "test_key": "ctx32k_ws8",
+      "context_len": 32768,
+      "working_set_size": 8,
+      "kv_total_gb": 14.0,
+      "bytes_per_token": 57344,
+      "cold": {
+        "avg_ms": 3195.5,
+        "median_ms": 3188.1,
+        "p90_ms": 3233.8,
+        "min_ms": 3182.8,
+        "max_ms": 3233.8,
+        "count": 8
+      },
+      "warm": {
+        "avg_ms": 707.2,
+        "median_ms": 219.7,
+        "p90_ms": 3957.7,
+        "min_ms": 180.0,
+        "max_ms": 3957.7,
+        "count": 8
+      },
+      "speedup": 4.52
+    }
+  }
+}
