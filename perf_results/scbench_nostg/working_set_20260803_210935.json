@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "model": "/data/models/Qwen2.5-14B-Instruct",
+    "mode": "lmcache",
+    "cpu_cache_gb": 27.0,
+    "ssd_cache_gb": 6.0,
+    "scbench_subset": "scbench_qa_eng",
+    "bytes_per_token": 196608,
+    "timestamp": "20260803_210935"
+  },
+  "results": {
+    "ctx8k_ws16": {
+      "test_key": "ctx8k_ws16",
+      "context_len": 8192,
+      "working_set_size": 16,
+      "kv_total_gb": 24.0,
+      "bytes_per_token": 196608,
+      "cold": {
+        "avg_ms": 1149.6,
+        "median_ms": 1141.5,
+        "p90_ms": 1206.2,
+        "min_ms": 1122.6,
+        "max_ms": 1232.7,
+        "count": 16
+      },
+      "warm": {
+        "avg_ms": 164.8,
+        "median_ms": 164.7,
+        "p90_ms": 167.8,
+        "min_ms": 160.7,
+        "max_ms": 169.5,
+        "count": 16
+      },
+      "speedup": 6.98
+    }
+  }
+}

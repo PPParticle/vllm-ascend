@@ -1,0 +1,19 @@
+# 归档的历史脚本与早期数据（不在本实验范围）
+archive/
+
+# 运行日志
+*.log
+srv_*.log
+/tmp/
+
+# Python
+__pycache__/
+*.pyc
+
+# lmcache disk cache（运行产物）
+/data/lmcache-disk/
+
+# 临时汇总
+diskread_both.txt
+diskread_both.jsonl
+scbench_diskread.txt

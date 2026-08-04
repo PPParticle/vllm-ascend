@@ -1,0 +1,353 @@
+{
+  "tag": "scbench_pressure_baseline_r02",
+  "config": "baseline",
+  "dataset": "scbench",
+  "arguments": {
+    "endpoint": "http://localhost:8100",
+    "model": "qwen2.5-14b",
+    "tokenizer": "/data/models/Qwen2.5-14B-Instruct",
+    "dataset": "scbench",
+    "ctx_len": 16384,
+    "cache_dir": "/data/hf-cache/hub",
+    "warmup": 2,
+    "rounds": 1,
+    "concurrency": 8,
+    "warmup_conc": 1,
+    "warmup_mt": 1,
+    "max_tokens": 256,
+    "mode": "pressure",
+    "target_chunks": 0,
+    "evict_count": 4,
+    "evict_blocks": 384,
+    "evict_concurrency": 8,
+    "evict_mt": 1,
+    "chunk_size": 128,
+    "apc_blocks": 256,
+    "hot_blocks": 256,
+    "evict_margin": 1.25,
+    "min_disk_chunk_ratio": 0.9,
+    "min_external_transfer_ratio": 0.9,
+    "chunk_mib": 24.0,
+    "disk_gib": 18.0,
+    "cpu_gib": 0.0,
+    "staging_gib": 0.0,
+    "disk_headroom": 0.9,
+    "drain_timeout": 300.0,
+    "drain_poll": 2.0,
+    "drain_stable_polls": 8,
+    "expect_disk": false,
+    "strict_tier_check": false,
+    "ttft_slo_seconds": 0.0,
+    "latency_slo_seconds": 0.0,
+    "seed": 42,
+    "config": "baseline",
+    "tag": "scbench_pressure_baseline_r02",
+    "out": "/home/fcqiao/v018-tests/perf_results",
+    "summary_jsonl": ""
+  },
+  "warmup": 2,
+  "rounds": 1,
+  "mean": 8.080937189995893,
+  "p50": 2.5572246659939992,
+  "p95": 13.604649713997787,
+  "accuracy": 0.0,
+  "drain_sec": 0.0,
+  "alloc_fail": 0,
+  "server_total_alloc_fail": 0,
+  "disk_files_peak": 0,
+  "per_round_mean": [
+    8.080937189995893
+  ],
+  "mode": "pressure",
+  "p99": 13.604649713997787,
+  "ttft_sec": {
+    "count": 2,
+    "mean": 8.080937189995893,
+    "stddev": 7.811709166093599,
+    "min": 2.5572246659939992,
+    "p50": 2.5572246659939992,
+    "p90": 13.604649713997787,
+    "p95": 13.604649713997787,
+    "p99": 13.604649713997787,
+    "max": 13.604649713997787
+  },
+  "latency_sec": {
+    "count": 2,
+    "mean": 16.625388060499972,
+    "stddev": 7.8143205503257755,
+    "min": 11.099829008999222,
+    "p50": 11.099829008999222,
+    "p90": 22.150947112000722,
+    "p95": 22.150947112000722,
+    "p99": 22.150947112000722,
+    "max": 22.150947112000722
+  },
+  "decode_after_first_token_sec": {
+    "count": 2,
+    "mean": 8.544450870504079,
+    "stddev": 0.002611384232176631,
+    "min": 8.542604343005223,
+    "p50": 8.542604343005223,
+    "p90": 8.546297398002935,
+    "p95": 8.546297398002935,
+    "p99": 8.546297398002935,
+    "max": 8.546297398002935
+  },
+  "throughput": {
+    "measurement_wall_sec": 22.15243635099614,
+    "attempted_requests": 2,
+    "successful_requests": 2,
+    "failed_requests": 0,
+    "attempted_qps": 0.09028352314439964,
+    "successful_qps": 0.09028352314439964,
+    "prompt_tokens": 32931,
+    "output_tokens": 512,
+    "total_tokens": 33443,
+    "prompt_tokens_per_sec": 1486.5633503341123,
+    "output_tokens_per_sec": 23.112581924966307,
+    "total_tokens_per_sec": 1509.6759322590785,
+    "ttft_slo_seconds": null,
+    "latency_slo_seconds": null,
+    "ttft_goodput_qps": 0.09028352314439964,
+    "latency_goodput_qps": 0.09028352314439964,
+    "combined_goodput_qps": 0.09028352314439964,
+    "server_prompt_tokens_by_source": {
+      "local_cache_hit": null,
+      "external_kv_transfer": null,
+      "local_compute": null
+    }
+  },
+  "successes": 2,
+  "failures": 0,
+  "failure_examples": [],
+  "target": {
+    "prompts": 2,
+    "tokens": 32931,
+    "full_blocks": 256,
+    "lmcache_chunks": 258,
+    "min_tokens": 16465,
+    "max_tokens": 16466
+  },
+  "eviction": {
+    "prompts": 3,
+    "tokens": 49411,
+    "full_blocks": 384,
+    "lmcache_chunks": 387,
+    "min_tokens": 16463,
+    "max_tokens": 16481
+  },
+  "target_indices": [
+    15,
+    50
+  ],
+  "evict_indices": [
+    30,
+    60,
+    7
+  ],
+  "target_token_counts": [
+    16465,
+    16466
+  ],
+  "evict_token_counts": [
+    16467,
+    16463,
+    16481
+  ],
+  "required_evict_blocks": 320,
+  "estimated_disk_gib": 15.1171875,
+  "target_drain_sec": 0.0,
+  "evict_drain_sec": 0.0,
+  "target_disk_state": {
+    "files": 0,
+    "bytes": 0,
+    "newest_mtime_ns": 0
+  },
+  "pre_measure_disk_state": {
+    "files": 0,
+    "bytes": 0,
+    "newest_mtime_ns": 0
+  },
+  "post_measure_disk_state": {
+    "files": 0,
+    "bytes": 0,
+    "newest_mtime_ns": 0
+  },
+  "disk_state_changed_during_measurement": false,
+  "metrics_before": {
+    "vllm:prefix_cache_queries": 1785916766.8735216,
+    "vllm:prefix_cache_hits": 1785817961.8735373,
+    "vllm:external_prefix_cache_queries": 1785817961.8735514,
+    "vllm:external_prefix_cache_hits": 1785817961.873564,
+    "vllm:prompt_tokens": 10715072455.241846,
+    "vllm:generation_tokens": 1785817966.873681,
+    "vllm:request_success": 8929089814.368603
+  },
+  "metrics_after": {
+    "vllm:prefix_cache_queries": 1790164993.8735216,
+    "vllm:prefix_cache_hits": 1785817961.8735373,
+    "vllm:external_prefix_cache_queries": 1785817961.8735514,
+    "vllm:external_prefix_cache_hits": 1785817961.873564,
+    "vllm:prompt_tokens": 10715138317.241846,
+    "vllm:generation_tokens": 1785818478.873681,
+    "vllm:request_success": 8929089816.368603
+  },
+  "metric_delta": {
+    "vllm:external_prefix_cache_queries": 0.0,
+    "vllm:external_prefix_cache_hits": 0.0,
+    "vllm:generation_tokens": 512.0,
+    "vllm:request_success": 2.0,
+    "vllm:prefix_cache_queries": 4248227.0,
+    "vllm:prefix_cache_hits": 0.0,
+    "vllm:prompt_tokens": 65862.0
+  },
+  "cache_miss_analysis": {
+    "apc": {
+      "unit": "tokens",
+      "queries": 4248227.0,
+      "hits": 0.0,
+      "misses": 4248227.0,
+      "hit_rate": 0.0
+    },
+    "external": {
+      "unit": "tokens",
+      "queries": 0.0,
+      "hits": 0.0,
+      "misses": 0.0,
+      "hit_rate": null
+    },
+    "lmcache_retrieve_tokens": {
+      "requested": null,
+      "hits": null,
+      "retrieve_shortfall": null,
+      "hit_rate": null
+    },
+    "lmcache_lookup": {
+      "queries": null,
+      "hits": null,
+      "lookup_misses": null,
+      "hit_rate": null
+    }
+  },
+  "allocator_analysis": {
+    "hard_alloc_failures": 0,
+    "staging_alloc_failures": 0,
+    "allocation_retries": 0,
+    "no_evict_candidate_events": 0,
+    "not_busy_looping_events": 0,
+    "sleep_events": 0,
+    "sleep_cumulative_seconds": 0,
+    "local_cpu_evict_count_delta": null,
+    "local_cpu_evict_keys_delta": null,
+    "local_cpu_evict_failed_delta": null
+  },
+  "log_event_delta": {
+    "alloc_fail": 0,
+    "alloc_retry": 0,
+    "staging_alloc_fail": 0,
+    "no_evict_candidate": 0,
+    "allocator_sleep": 0,
+    "not_busy_looping": 0,
+    "disk_space_fail": 0,
+    "partial_retrieve": 0,
+    "disk_read": 0,
+    "disk_write": 0,
+    "disk_prefetch": 0,
+    "retrieve_response": 0
+  },
+  "log_analysis": {
+    "events": {
+      "alloc_fail": 0,
+      "alloc_retry": 0,
+      "staging_alloc_fail": 0,
+      "no_evict_candidate": 0,
+      "allocator_sleep": 0,
+      "not_busy_looping": 0,
+      "disk_space_fail": 0,
+      "partial_retrieve": 0,
+      "disk_read": 0,
+      "disk_write": 0,
+      "disk_prefetch": 0,
+      "retrieve_response": 0
+    },
+    "allocator_sleep_seconds": 0,
+    "disk_read": {
+      "operations": 0,
+      "bytes": 0,
+      "mib": 0.0,
+      "bandwidth_mbps": {
+        "count": 0,
+        "mean": null,
+        "stddev": null,
+        "min": null,
+        "p50": null,
+        "p90": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      }
+    },
+    "disk_write": {
+      "operations": 0,
+      "bytes": 0,
+      "mib": 0.0,
+      "bandwidth_mbps": {
+        "count": 0,
+        "mean": null,
+        "stddev": null,
+        "min": null,
+        "p50": null,
+        "p90": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      }
+    },
+    "disk_prefetch_chunks": 0,
+    "retrieved_length_tokens": {
+      "count": 0,
+      "mean": null,
+      "stddev": null,
+      "min": null,
+      "p50": null,
+      "p90": null,
+      "p95": null,
+      "p99": null,
+      "max": null
+    }
+  },
+  "per_request": [
+    {
+      "dataset_index": 15,
+      "prompt_tokens": 16465,
+      "prompt_full_blocks": 128,
+      "output_tokens": 256,
+      "ttft_sec": 2.5572246659939992,
+      "latency_sec": 11.099829008999222,
+      "decode_after_first_token_sec": 8.542604343005223,
+      "ok": true,
+      "status_code": 200,
+      "error": ""
+    },
+    {
+      "dataset_index": 50,
+      "prompt_tokens": 16466,
+      "prompt_full_blocks": 128,
+      "output_tokens": 256,
+      "ttft_sec": 13.604649713997787,
+      "latency_sec": 22.150947112000722,
+      "decode_after_first_token_sec": 8.546297398002935,
+      "ok": true,
+      "status_code": 200,
+      "error": ""
+    }
+  ],
+  "capacity_conditioned": true,
+  "apc_miss_valid": true,
+  "target_disk_complete": true,
+  "observed_disk_chunks": 0,
+  "disk_chunk_ratio": 0.0,
+  "disk_path_observed": true,
+  "pressure_valid": null,
+  "conditioning_valid": true
+}
